@@ -15,6 +15,8 @@ class Tree {
         void insert(TreeNode*& root, int value);
         void insert(int value);
         void inOrder(TreeNode* root);
+        void preOrder(TreeNode* root);
+        void postOrder(TreeNode* root);
         void create();
 };
 
@@ -41,8 +43,24 @@ void Tree::insert(int value) {
 void Tree::inOrder(TreeNode *root){
     if(root != NULL){
         inOrder(root->left);
-        cout << root->data << endl ;
+        cout << root->data << " " ;
         inOrder(root->right);
+    }
+}
+
+void Tree::preOrder(TreeNode *root) {
+    if(root != NULL) {
+        cout << root->data << " " ;
+        preOrder(root->left);
+        preOrder(root->right);
+    }
+}
+
+void Tree::postOrder(TreeNode *root) {
+    if(root != NULL) {
+        postOrder(root->left);
+        postOrder(root->right);
+        cout << root->data << " " ;
     }
 }
 
