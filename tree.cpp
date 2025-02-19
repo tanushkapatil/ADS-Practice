@@ -49,12 +49,12 @@ void Tree::inOrder(TreeNode *root){
 void Tree::create() {
     int choice, value;
     do{
-        cout << "0. Exit" ;
-        cout << "1. Insert Multiple" ;
-        cout << "2. Insert Single" ;
-        cout << "3. Display Inorder" ;
-        cout << "Enter Your Choice : " ;
-        cin >> choice ;
+        cout << "0. Exit\n";
+        cout << "1. Insert Multiple\n";
+        cout << "2. Insert Single\n";
+        cout << "3. Display Inorder\n";
+        cout << "Enter Your Choice: ";
+        cin >> choice;
 
         switch(choice) {
             case 0:
@@ -62,7 +62,7 @@ void Tree::create() {
                 break;
             case 1: {
                 int n;
-                cout << "How many nodes to insert? ";
+                cout << "How many nodes to insert?: ";
                 cin >> n;
                 for (int i = 0; i < n; i++) {
                     cout << "Enter value " << (i + 1) << ": ";
