@@ -71,6 +71,8 @@ void Tree::create() {
         cout << "1. Insert Multiple\n";
         cout << "2. Insert Single\n";
         cout << "3. Display Inorder\n";
+        cout << "4. Display PreOrder\n";
+        cout << "5. Display PostOrder\n";
         cout << "Enter Your Choice: ";
         cin >> choice;
 
@@ -98,6 +100,16 @@ void Tree::create() {
             case 3:
                 cout << "In-order traversal: ";
                 inOrder(root);
+                cout << "\n";
+                break;
+            case 4:
+                cout << "Pre-order traversal: ";
+                preOrder(root);
+                cout << "\n";
+                break;
+            case 5:
+                cout << "Post-order traversal: ";
+                postOrder(root);
                 cout << "\n";
                 break;
             default:
